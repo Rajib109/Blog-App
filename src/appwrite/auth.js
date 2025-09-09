@@ -13,11 +13,13 @@ class AppwriteAuth {
   }
   async createAccount({ email, password, name }) {
     try {
-      const userAccount = await this.account.create(
-        ID.unique(), // Unique user ID
-        email, // User email
-        password, // User password
-        name // User name
+      const userAccount = await this.account.create({
+
+        userId:ID.unique(), // Unique user ID
+        email:email, // User email
+        password:password, // User password
+        name:name // User name
+      }
       );
       if (userAccount) {
         return this.login({
@@ -47,7 +49,6 @@ class AppwriteAuth {
     } catch (error) {
       throw error;
     }
-    return null;
   }
 
   async logout() {
