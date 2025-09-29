@@ -104,3 +104,6 @@ export class service {
     }
   }
 }
+
+const appwriteService = new service();
+export default appwriteService;
