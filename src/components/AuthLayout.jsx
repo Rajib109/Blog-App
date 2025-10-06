@@ -16,17 +16,7 @@ const Protected = ({ children, authentication = true }) => {
     setIsLoading(false);
   }, [authentication, authStatus, navigate]);
 
-  return (
-    <div>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : authentication ? (
-        children
-      ) : (
-        <p>You are not authorized to view this content.</p>
-      )}
-    </div>
-  );
+  return isLoading ? <h1>Loading...</h1> : children;
 };
 
 export default Protected;
