@@ -4,4 +4,5 @@ import Container from './container/container'
 import Logo from './Logo'
 import Button from './Button'
 import Logout from './Header/LogoutBtn'
-export {Header,Footer,Container,Logo,Button,Logout}
+import RTE from './RTE'
+export {Header,Footer,Container,Logo,Button,Logout,RTE}
