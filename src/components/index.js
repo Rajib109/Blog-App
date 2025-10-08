@@ -11,6 +11,7 @@ import Input from "./Input";
 import Select from "./Select";
 import Login from "./Login";
 import AuthLayout from "./AuthLayout";
+import Signup from "../pages/SignUp";
 export {
   Header,
   Footer,
@@ -25,4 +26,5 @@ export {
   Select,
   Login,
   AuthLayout,
+  Signup
 };
