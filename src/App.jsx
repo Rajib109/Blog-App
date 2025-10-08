@@ -24,7 +24,7 @@ function App() {
         }
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [dispatch,navigate]);
 
   return !loading ? (
     <div className="bg-gray-700 flex flex-wrap min-h-screen">
