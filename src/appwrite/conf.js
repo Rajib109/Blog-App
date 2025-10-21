@@ -1,6 +1,8 @@
 import config from "../config/config";
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
+console.log("Appwrite Config :: ", config.appwrite);
+
 export class service {
   client = new Client();
   databases;

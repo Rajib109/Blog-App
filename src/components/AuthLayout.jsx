@@ -8,10 +8,11 @@ const Protected = ({ children, authentication = true }) => {
   const authStatus = useSelector((state) => state.auth.status);
 
   useEffect(() => {
-    if (authentication && authStatus != authentication) {
-      navigate("/login");
-    } else if (!authentication && authStatus != authentication) {
-      navigate("/");
+    // After initial mount and on authStatus changes, decide where to go
+    if (authentication && authStatus !== authentication) {
+      navigate("/login", { replace: true });
+    } else if (!authentication && authStatus !== authentication) {
+      navigate("/", { replace: true });
     }
     setIsLoading(false);
   }, [authentication, authStatus, navigate]);
