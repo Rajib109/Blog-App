@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Logo } from "../index";
 import Logout from "./LogoutBtn";
 import { useSelector } from "react-redux";
